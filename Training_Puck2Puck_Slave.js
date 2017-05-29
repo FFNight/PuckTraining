@@ -1,7 +1,8 @@
-// Working (tied with v11a)
+// Training_Puck2Puck_Slave.js
 
-//"digitalWrite(LED3,0)\ndigitalWrite(LED2,0)\ndigitalWrite(LED1,1)\n"
-
+// Must run on slave Puck before the master Puck is configured
+// Does not do anything at first, it only declares the "rebroadcast()" function
+// which is used by the master code
 
 function rebroadcast(command) {  
   NRF.requestDevice({ filters: [{ namePrefix: 'Puck.js' }] }).then(function(device) {
